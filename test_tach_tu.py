@@ -45,7 +45,7 @@ class TextClassificationPredict(object):
         # check report about 'label' data train
         y_train_pred = classification_report(df_train.target, model.clf.predict(df_train.target),output_dict=True,zero_division=1)
         print(type(y_train_pred))
-        print(y_train_pred)
+        print(y_train_pred.keys())
 
 
         # Print predicted result

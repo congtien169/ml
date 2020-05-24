@@ -16,14 +16,43 @@ class SVMModel(object):
             ("vect", CountVectorizer()),
             ("tfidf", TfidfTransformer()),
             ("clf-svm", SGDClassifier(
-                loss='log',
+                loss='modified_huber',
+                penalty='l1',
+                alpha=1/100000,
+                max_iter=1000,
+                learning_rate='optimal',
+                n_jobs=-1,
+                average=False
+            ))
+        ])
+        return pipe_line
+
+
+"""
+("clf-svm", SGDClassifier(
+                loss='modified_huber',
+                penalty=None,
+                l1_ratio=0,
+                alpha=0.0001,
+                max_iter=1000,
+                learning_rate='optimal',
+                n_jobs=-1,
+                average=False
+            ))
+            loss='modified_huber',
+                penalty=None,
+                l1_ratio=0,
+                alpha=0.0001,
+                max_iter=1000,
+                learning_rate='optimal',
+                n_jobs=-1,
+                average=False
+            
+             loss='log',
                 penalty='l2',
                 alpha=0.0001,
                 max_iter=1000,
                 learning_rate='optimal',
                 n_jobs=6,
                 average=3
-            ))
-        ])
-
-        return pipe_line
+"""

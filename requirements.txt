@@ -7,7 +7,6 @@ kiwisolver==1.2.0
 matplotlib==3.2.1
 numpy==1.18.4
 pandas==1.0.3
-pip==19.0.3
 pyparsing==2.4.7
 python-crfsuite==0.9.7
 python-dateutil==2.8.1
@@ -15,8 +14,7 @@ pytz==2020.1
 pyvi==0.0.9.9
 requests==2.23.0
 scikit-learn==0.23.0
-scipy ==1.4.1
-setuptools==40.8.0
+scipy==1.4.1
 six==1.14.0
 sklearn-crfsuite==0.3.6
 tabulate==0.8.7
